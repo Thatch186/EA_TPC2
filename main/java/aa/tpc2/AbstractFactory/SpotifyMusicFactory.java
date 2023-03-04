@@ -1,26 +1,14 @@
 package aa.tpc2.AbstractFactory;
 
-import aa.tpc2.Objects.Song;
-
 public class SpotifyMusicFactory implements MusicFactory{
 
     @Override
-    public void playMusic(Song s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'playMusic'");
+    public Album createAlbum() {
+        return new SpotifyAlbum();
     }
 
     @Override
-    public void createPlaylist(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createPlaylist'");
-    }
-
-    @Override
-    public void addToPlaylist(Song s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addToPlaylist'");
-    }
-    
-    
+    public Playlist createPlaylist() {
+       return new SpotifyPlaylist();
+    }   
 }

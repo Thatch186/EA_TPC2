@@ -1,25 +1,16 @@
 package aa.tpc2.AbstractFactory;
 
-import aa.tpc2.Objects.Song;
-
 public class AppleMusicFactory implements MusicFactory{
-
+ 
     @Override
-    public void playMusic(Song s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'playMusic'");
+    public Album createAlbum() {
+        return new AppleMusicAlbum();
     }
 
     @Override
-    public void createPlaylist(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createPlaylist'");
+    public Playlist createPlaylist() {
+        return new AppleMusicPlaylist();
     }
-
-    @Override
-    public void addToPlaylist(Song s) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addToPlaylist'");
-    }
-    
 }
+    
+
